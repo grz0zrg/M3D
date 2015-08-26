@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="demo" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="host">
+				<Option output=".host/demo" prefix_auto="1" extension_auto="1" />
+				<Option working_dir=".host/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-Wextra" />
+					<Add option="-Wall" />
+					<Add option="-pg" />
+					<Add option="-g" />
+					<Add option="-DGLEW_STATIC" />
+					<Add directory="C:/GPH_SDK/DGE/include" />
+					<Add directory="C:/GPH_SDK/DGE/include/windows" />
+					<Add directory="C:/GPH_SDK/DGE/include/SDL" />
+					<Add directory="C:/GPH_SDK/include" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-pg -lgmon" />
+					<Add option="-lopengl32" />
+					<Add option="-lglfw3dll" />
+					<Add directory="C:/GPH_SDK/DGE/lib/host" />
+					<Add directory="C:/GPH_SDK/lib/host" />
+					<Add directory="lib" />
+				</Linker>
+			</Target>
+			<Target title="target">
+				<Option output=".target/demo" prefix_auto="0" extension_auto="0" />
+				<Option type="0" />
+				<Option compiler="devkitwiz" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-Wall" />
+					<Add option="-DDEBUG" />
+					<Add option="-DGP2X_WIZ" />
+					<Add directory="C:/GPH_SDK/DGE/include" />
+					<Add directory="C:/GPH_SDK/DGE/include/SDL" />
+					<Add directory="C:/GPH_SDK/include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-lopengles_lite" />
+					<Add option="-lglport" />
+					<Add option="-lsdl" />
+					<Add option="-lts" />
+					<Add directory="C:/GPH_SDK/DGE/lib/target" />
+					<Add directory="C:/GPH_SDK/lib/target" />
+				</Linker>
+			</Target>
+			<Target title="host_linux">
+				<Option output=".host/demo" prefix_auto="1" extension_auto="1" />
+				<Option working_dir=".host/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-Wextra" />
+					<Add option="-Wall" />
+					<Add option="-pg" />
+					<Add option="-g" />
+					<Add option="-DGLEW_STATIC" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-pg" />
+					<Add option="-lglfw3" />
+					<Add option="-lGL" />
+					<Add option="-lX11" />
+					<Add option="-lXxf86vm" />
+					<Add option="-lXrandr" />
+					<Add option="-lpthread" />
+					<Add option="-lXi" />
+					<Add option="-lrt" />
+					<Add directory="lib" />
+				</Linker>
+			</Target>
+		</Build>
+		<Unit filename="lib/GL/glew.c">
+			<Option compilerVar="CC" />
+			<Option target="host" />
+			<Option target="host_linux" />
+		</Unit>
+		<Unit filename="src/m3d/benchmark.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/m3d/benchmark.h" />
+		<Unit filename="src/m3d/camera.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/m3d/camera.h" />
+		<Unit filename="src/m3d/color.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/m3d/color.h" />
+		<Unit filename="src/m3d/cross_gl.h" />
+		<Unit filename="src/m3d/define.h" />
+		<Unit filename="src/m3d/font.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/m3d/font.h" />
+		<Unit filename="src/m3d/geometry.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/m3d/geometry.h" />
+		<Unit filename="src/m3d/hash_table.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/m3d/hash_table.h" />
+		<Unit filename="src/m3d/image.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/m3d/image.h" />
+		<Unit filename="src/m3d/light.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/m3d/light.h" />
+		<Unit filename="src/m3d/lodepng/lodepng.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/m3d/lodepng/lodepng.h" />
+		<Unit filename="src/m3d/m3d.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/m3d/m3d.h" />
+		<Unit filename="src/m3d/material.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/m3d/material.h" />
+		<Unit filename="src/m3d/matrix.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/m3d/matrix.h" />
+		<Unit filename="src/m3d/mesh.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/m3d/mesh.h" />
+		<Unit filename="src/m3d/obj_loader.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/m3d/obj_loader.h" />
+		<Unit filename="src/m3d/png_loader.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/m3d/png_loader.h" />
+		<Unit filename="src/m3d/render.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/m3d/render.h" />
+		<Unit filename="src/m3d/resource_manager.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/m3d/resource_manager.h" />
+		<Unit filename="src/m3d/texture.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/m3d/texture.h" />
+		<Unit filename="src/m3d/tga_loader.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/m3d/tga_loader.h" />
+		<Unit filename="src/m3d/util.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/m3d/util.h" />
+		<Unit filename="src/m3d/vbo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/m3d/vbo.h" />
+		<Unit filename="src/main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
