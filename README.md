@@ -18,3 +18,5 @@ Do what you want.
 ### Screenshot ###
 
 ![Alt text](http://www.garzul.tonsite.biz/tmp_/demo.png "m3d")
+
+![Alt text](http://garzul.tonsite.biz/m3d/hash_table_occupancy.png "hash table occupancy pattern")
