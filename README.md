@@ -19,4 +19,6 @@ Do what you want.
 
 ![Alt text](http://www.garzul.tonsite.biz/tmp_/demo.png "m3d")
 
+The hash table implementation occupancy pattern:
+
 ![Alt text](http://garzul.tonsite.biz/m3d/hash_table_occupancy.png "hash table occupancy pattern")
